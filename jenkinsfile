@@ -27,7 +27,6 @@ pipeline {
                 sh 'terraform plan -out=tfplan'
             }
         }
-
         stage('Terraform destroy') {
             steps {
                 sh 'terraform destroy tfplan'
